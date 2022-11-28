@@ -1,20 +1,17 @@
-.container{
-    width:80%;
-    height: 1000px;
-    margin: auto;
-    justify-content: center;
+.wrapper{
+    width: 960px;
     display: flex;
 }
-.left__div{
-    background-color: yellow;
-    width: calc(75% - 10px);
-    height: 40%;
+.one, .two, .three {
+    background-color: green;
+    width: calc(33% - 10px);
     border: 1px solid black;
 }
-.right__div{
-    background-color: yellow;
-    width: calc(22% -30px );
-    height: 700px;
-    margin-left: 10px;
-    border: 1px solid black;
+@media (max-width:800px) {
+    .one, .two, .three {
+        width: 100%;
+    }
+    .wrapper{
+        flex-direction:column;
+    }
 }
